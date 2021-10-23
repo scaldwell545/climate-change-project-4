@@ -197,6 +197,9 @@ def res():
 def about(): 
     return render_template('about.html')
 
+@app.route('/predict')
+def predict(): 
+    return render_template('predict.html')
 
 
 

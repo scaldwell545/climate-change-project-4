@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>About</title>
+    <title>Data Visualizations</title>
     
     <!-- Leaflet JavaScript code-->
     <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
@@ -44,7 +44,7 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       
     <!-- JQuery CSS-->
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" type="text/css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" type="text/css">
       
       
     <!-- close navbar when click off -->
@@ -119,61 +119,43 @@
       
 <!--       Content -->
       <div class='container'>
-          <div class="row" style="text-align:left; padding-top:50px; font-size: 25px;">
-              <p style="text-align:left;"><b>About the Data</b></p>
-              <p> The data used within this dashboard was gathered from Kaggle.com. Click on a header to view the source.</p>
-              <br><br>
-              <hr>
-              <br>
-                  <ul style="padding-left:50px">
-                      <li>
-                          <a href="https://www.kaggle.com/sevgisarac/temperature-change?select=Environment_Temperature_change_E_All_Data_NOFLAG.csv"><b>"Temperature Change"</b></a> <br><br>
-                          Description:<br> "The FAOSTAT Temperature Change domain disseminates statistics of mean surface temperature change by country, with annual updates. The current dissemination covers the period 1961–2019. Statistics are available for monthly, seasonal and annual mean temperature anomalies, i.e., temperature change with respect to a baseline climatology, corresponding to the period 1951–1980. The standard deviation of the temperature change of the baseline methodology is also available. Data are based on the publicly available GISTEMP data, the Global Surface Temperature Change data distributed by the National Aeronautics and Space Administration Goddard Institute for Space Studies (NASA-GISS). Via http://www.fao.org/faostat/en/#data/ET/metadata"<br>
-                          <br>
-                          Link:<br> https://www.kaggle.com/sevgisarac/temperature-change?select=Environment_Temperature_change_E_All_Data_NOFLAG.csv<br><br>
-                      </li>
-                      <li>
-                          <a href="https://www.kaggle.com/yoannboyere/co2-ghg-emissionsdata"><b>"CO2_GHG_emissions-data"</b></a> <br><br>
-                          Description:<br> "This dataset contains CO2 and GHG emissions for countries since 1750 until 2017.
-The source is OurWorldInData (https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions). Via https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions"<br>
-                          <br>
-                          Link:<br> https://www.kaggle.com/yoannboyere/co2-ghg-emissionsdata<br><br>
-                      </li>
-                      <li>
-                          <a href="https://www.kaggle.com/sansuthi/greenhouse-gas-emissions"><b>"Greenhouse Gas Emissions"</b></a> <br><br>
-                          Description:<br> "A two-column dataset for Greenhouse gas emissions by sector. Via http://ourworldindata.org/ghg-emissions-by-sector"<br>
-                          <br>
-                          Link:<br> https://www.kaggle.com/sansuthi/greenhouse-gas-emissions<br><br>
-                      </li>
-                      <li>
-                          <a href="https://www.kaggle.com/akshat0giri/death-due-to-air-pollution-19902017"><b>"Deaths Due to Air Pollution"</b></a> <br><br>
-                          Description:<br> "Year: Years range from 1990 to 2017
-Air pollution (total) (deaths per 100,000) : Contain total death.
-Indoor air pollution (deaths per 100,000) : Contains death due to indoor air pollution.
-Outdoor particulate matter (deaths per 100,000) : Contains death due to outdoor pollution.
-Outdoor ozone pollution (deaths per 100,000) : Death due to ozone pollution. Via https://ourworldindata.org/air-pollution"<br>
-                          <br>
-                          Link:<br> https://www.kaggle.com/akshat0giri/death-due-to-air-pollution-19902017<br><br>
-                      </li>
-                      
-                  </ul>
+          <div class="row" style="text-align:center; padding-top:50px;">
+              <p style="font-size: 30px; font-weight:bold;"> Use our machine learning model to predict future PM2.5 (µg/m3) pollution concentrations in China.</p>
           </div>
       </div>
+      
+      
+      <div class="container" style="max-width: 100%;">
+            <div class="row" style="margin-bottom:0px; margin-top:60px; background-color: #f8f9fa;">
+                <div class='col-md-4' style="padding-right:0; text-align:center; padding:50px;">
+                    <h2 style="font-weight:bold;">Change in Mean Surface Temperature (°C) 1970-2019 by Country</h2><br>
+                    <p style="font-size: 20px;">Use the slider on the top right to quickly shift between years and view fluctuations in surface temperatures as time changes. <br><br> Use the drop-down layer selection menu to analyze a specific year. <br><br> Click on a country to view the country name and the difference in the mean surface temperature (°C) from the previous year.</p>
+                </div>
+
+          </div>
+      
+      </div>
+      
+      
 
       
       
-      
-    <div class="footer">
-        <p>&copy; S. Caldwell 2021. Thanks for visiting!</p>
+      <div class="footer">
+            <p>&copy; S. Caldwell 2021. Thanks for visiting!</p>
     </div>
 
       
 
       
       
-
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
     <!-- D3 JS -->
     <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!-- Plotly JS -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
 
     </body>
 </html>
