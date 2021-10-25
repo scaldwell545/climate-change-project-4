@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, render_template, request
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, Float
@@ -8,7 +8,9 @@ import pandas as pd
 import csv
 import geojson
 import numpy as np
+from keras.models import load_model
 from HiddenConfig import password ## hide when deploying
+
 
 app=Flask(__name__)
 morerecords = os.path.join(os.getcwd(), "Resources", "newcountry.geojson")
@@ -176,6 +178,15 @@ for index, row in co2_year_df.iterrows():
 co2_year_avg_features = [year_array, co2_avg_array]
 
 
+#################################### get machine learning model prediction ###########################
+
+model = load_model('MachineLearning/Models/SO2_model.h5')
+
+
+
+
+
+
 
 
 ############################The Endpoints####################################
@@ -197,10 +208,19 @@ def res():
 def about(): 
     return render_template('about.html')
 
-@app.route('/predict')
+@app.route('/predict', methods=['GET', 'POST'])
 def predict(): 
+    if request.method == 'POST':
+        try:
+            time = request.form['Time']
+            time = [[[int(time)]]]
+#             time = np.array(time)
+#             X_test = np.reshape(time, (time.shape[0], time.shape[1], 1))
+            pred = model.predict(time)
+            return render_template('predict.html', pred=str(pred))
+        except:
+            return render_template('predict.html', pred="Invalid Value")
     return render_template('predict.html')
-
 
 
 

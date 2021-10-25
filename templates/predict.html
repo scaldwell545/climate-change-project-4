@@ -127,22 +127,21 @@
       
       <div class="container" style="max-width: 100%;">
             <div class="row" style="margin-bottom:0px; margin-top:60px; background-color: #f8f9fa;">
-                <div class='col-md-4' style="padding-right:0; text-align:center; padding:50px;">
+                <div class='col-md-8' style="padding-right:0; text-align:center; padding:50px;">
                     <h2 style="font-weight:bold;">Change in Mean Surface Temperature (°C) 1970-2019 by Country</h2><br>
                     <p style="font-size: 20px;">Use the slider on the top right to quickly shift between years and view fluctuations in surface temperatures as time changes. <br><br> Use the drop-down layer selection menu to analyze a specific year. <br><br> Click on a country to view the country name and the difference in the mean surface temperature (°C) from the previous year.</p>
                 </div>
-
+                <div class='col-md-4' style="padding-right:0; text-align:center; padding:50px;">
+                    <form method = "POST">
+                        <p>Time: <input type = "text" name = "Time" /></p>
+                        <p>PM2.5 Concentration: {{ pred }}</p>
+                    </form>
+                </div>
           </div>
-      
       </div>
-      
-      
-
-      
-      
       <div class="footer">
-            <p>&copy; S. Caldwell 2021. Thanks for visiting!</p>
-    </div>
+          <p>&copy; S. Caldwell 2021. Thanks for visiting!</p>
+      </div>
 
       
 
